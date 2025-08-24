@@ -1,2 +1,22 @@
 config:
-  value:"quiz-service , we are in production"
+  value: "quiz-service we are in prod env"
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://prod-host:27017/quiz
+  aop:
+    auto: false
+
+server:
+  port: 9092
+
+eureka:
+  instance:
+    hostname: prod-server
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://prod-eureka:8761/eureka/

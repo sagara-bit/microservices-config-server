@@ -1,7 +1,22 @@
-spring:
-  config:
-    activate:
-      on-profile: dev
-
 config:
   value: "quiz-service we are in dev env"
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/quiz
+  aop:
+    auto: false
+
+server:
+  port: 9092
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
