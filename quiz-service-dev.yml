@@ -1,3 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+
 config:
   value: "quiz-service we are in dev env"
-
