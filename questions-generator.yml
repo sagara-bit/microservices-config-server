@@ -1,6 +1,6 @@
 spring:
   application:
-    name: question-generator
+    name: questions-generator
 
   data:
     mongodb:
